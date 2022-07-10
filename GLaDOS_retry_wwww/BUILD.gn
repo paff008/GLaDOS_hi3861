@@ -1,0 +1,36 @@
+
+static_library("GLaDOS") {
+  sources = [
+    "hislink/app_demo_uart.c",
+    "hislink/hisignalling_protocol.c",
+    "msg_find/msg_demo.c",
+    "range/range_finding.c",
+    "tower/tower.c",
+    "uart_stm32/uart_32demo.c",
+    "wifi_tencent_app/app_demo_iot.c",
+    "wifi_tencent_app/cjson_init.c",
+    "wifi_tencent_app/iot_hmac.c",
+    "wifi_tencent_app/iot_log.c",
+    "wifi_tencent_app/iot_main.c",
+    "wifi_tencent_app/iot_profile.c",
+    "wifi_tencent_app/iot_sta.c",
+    "app_demo_config.c",
+    "hal_iot_gpio_ex.c",
+    "pump/pump_control.c",
+    "oled/oled_demo.c",
+    "oled/oled_ssd1306.c"
+  ]
+
+  include_dirs = [
+    "./",
+    "//utils/native/lite/include",
+    "//kernel/liteos_m/kal/cmsis",
+    "//base/iot_hardware/peripheral/interfaces/kits",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/lwip_sack/include/lwip",
+    "//third_party/cJSON",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/mbedtls/include/mbedtls",
+    "//foundation/communication/wifi_lite/interfaces/wifiservice",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/paho.mqtt.c/include/mqtt",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/libcoap/include/coap2",
+  ]
+}
